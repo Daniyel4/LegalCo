@@ -1,0 +1,2704 @@
+/*STYLEZZZZZZ SHEET*/
+
+
+@font-face{
+    font-family: "Mariupol-Regular";
+    src: url("assets/fonts/Mariupol-Regular.otf");
+}
+
+@font-face{
+    font-family: "Mariupol-Medium";
+    src: url("assets/fonts/Mariupol-Medium.otf");
+}
+
+@font-face{
+    font-family: "Mariupol-Bold";
+    src: url("assets/fonts/Mariupol-Bold.otf");
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+*:focus{
+    outline: none;
+}
+
+
+
+:root{
+    
+    --color-green: #34465c;
+    --color-light-blue: #cddeef;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-grey: #9caabb;
+    --color-not-black: #11171e;
+    --color-accent: #633E36;
+    --color-dark-grey: #717881;
+}
+
+body{
+    font-family: "Mariupol-Regular", sans-serif;
+}
+
+
+.menu-backdrop{
+       position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 810px;
+        z-index: 1;
+        background: rgba(17, 23, 30, 0.64);
+}
+
+
+
+.menu{
+    position: absolute;
+    width: 467px;
+    height: 810px;
+    background: var(--color-light-blue);
+    left: 0px;
+    top: 0px;
+    padding-left: 99px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+
+
+.visible{
+    
+    animation: slide 0.9s forwards;
+    left: -100%;
+}
+
+
+@keyframes slide{
+    100% { left: 0; }
+}
+
+
+.close-button{
+    margin-top: 81px;
+    margin-bottom: 76px;
+    cursor: pointer;
+}
+
+.menu-line{
+    position: absolute;
+    width: 281px;
+    height: 0px;
+    left: 256px;
+    top: 350px;
+    opacity: 0.5;
+    border: 2px solid var(--color-green);
+    transform: rotate(90deg);
+}
+
+
+.menu nav ul li{
+    list-style: none;
+    margin-top: 20px;
+}
+
+
+.menu nav ul li a{
+    line-height: 23px;
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--color-green);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.menu nav ul li a:hover{
+    color: black;
+}
+
+
+.menu nav ul li:hover::after{
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 0px;
+    left: 368px;
+    top: 336px;
+    border: 4px solid #11171E;
+    vertical-align: middle;
+}
+
+
+.menu nav ul li:hover:first-child::after{
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 0px;
+    left: 368px;
+    top: 336px;
+    border: 4px solid #11171E;
+    margin-left: 181px;
+}
+
+
+.menu nav ul li:hover:last-child::after{
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 0px;
+    left: 368px;
+    top: 336px;
+    border: 4px solid #11171E;
+    margin-left: 151px;
+}
+
+
+.menu nav ul li:hover:nth-child(2)::after{
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 0px;
+    left: 368px;
+    top: 336px;
+    border: 4px solid #11171E;
+    margin-left: 160px;
+}
+
+.menu nav ul li:hover:nth-child(3)::after{
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 0px;
+    left: 368px;
+    top: 336px;
+    border: 4px solid #11171E;
+    margin-left: 175px;
+}
+
+.menu nav ul li:hover:nth-child(4)::after{
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 0px;
+    left: 368px;
+    top: 336px;
+    border: 4px solid #11171E;
+    margin-left: 163px;
+}
+
+.menu nav ul li:hover:nth-child(5)::after{
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 0px;
+    left: 368px;
+    top: 336px;
+    border: 4px solid #11171E;
+    margin-left: 167px;
+}
+
+.menu nav ul li:hover:nth-child(6)::after{
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 0px;
+    left: 368px;
+    top: 336px;
+    border: 4px solid #11171E;
+    margin-left: 227px;
+}
+
+
+.menu .menu-address{
+    margin-top: 75px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.menu .menu-date-time{
+    margin-top: 12px;
+    font-size: 18px;
+}
+
+.d-grid{
+    display: flex;
+    margin-top: 41px;
+}
+
+.menu-email h5{
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.menu-logo img{
+    margin-top: 40px;
+    margin-left: 58px;
+}
+
+.sub-mobile-menu{
+    display: none;
+}
+
+
+.sub-menu .container{
+    padding-left: 102px;
+    padding-right: 102px;
+    padding-top: 72px;
+    padding-bottom: 134px;
+}
+
+.sub-menu-nav-item{
+    margin-left: 442px;
+    background: var(--color-not-black);
+    padding: 5px;
+}
+
+.sub-menu-nav-item2{
+    margin-left: 236px;
+    background: var(--color-not-black);
+    padding: 5px;
+}
+
+
+.sub-menu .container ul{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.sub-menu .container ul li{
+    list-style: none;
+}
+
+.sub-menu .container ul li img{
+    margin-left: 192px;
+}
+
+.submenu-line {
+    position: absolute;
+    width: 54px;
+    height: 0px;
+    left: 55px;
+    top: 74px;
+    background: var(--color-white);
+    border: 2px solid #CDDEEF;
+    transform: rotate(90deg);
+}
+
+
+
+.sub-menu .container ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--color-white);
+}
+
+.first-section{
+    width: 100%;
+    height: 810px;
+    left: 0;
+    top: 0;
+    background: linear-gradient(89.71deg, #11171E 32.05%, rgba(17, 23, 30, 0) 79.9%), url(assets/images/hero-image.jpg) no-repeat center right;
+    background-size: cover;
+}
+
+.first-section-title{
+    margin-left: 77px;
+}
+
+.first-section-title h1{
+    width: 860px;
+    height: 134px;
+    left: 102px;
+    top: 309px;
+    color: var(--color-white);
+    font-size: 70px;
+    font-weight: 500;
+    
+}
+
+.grid-d{
+    display: flex;
+}
+
+.section-line-1{
+    position: absolute;
+    width: 80px;
+    height: 0px;
+    left: 90px;
+    top: 588px;
+    opacity: 0.5;
+    border: 2px solid #CDDEEF;
+    transform: rotate(180deg);
+}
+
+.section-line-2{
+    position: absolute;
+    width: 222px;
+    height: 0px;
+    left: -25px;;
+    top: 699px;
+    opacity: 0.5;
+    border: 2px solid #CDDEEF;
+    transform: rotate(90deg);
+}
+
+.grid-d .text{
+    margin-left: 199px;
+    margin-top: 122px;
+}
+
+.grid-d .text h4{
+    width: 259px;
+    height: 54px;
+    left: 207px;
+    top: 565px;
+    font-size: 28px;
+    font-weight: 400;
+    color: white;
+}
+
+
+.cta-btn-contain{
+    margin-left: 66px;
+    margin-top: 133px;
+}
+
+.cta-btn{
+    width: 307px;
+    height: 59px;
+    left: 0px;
+    top: 0px;
+    background: var(--color-light-blue);
+    padding: 19px 23px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: var(--color-green);
+}
+
+.about-us{
+    padding-top: 132px;
+    width: 100%;
+    height: 660px;
+    background: url(assets/images/lawscale.png) no-repeat 100% 90%;
+}
+
+.about-us-line{
+    position: absolute;
+    width: 233px;
+    height: 0px;
+    left: 1190px;
+    top: 927px;
+    border: 2px solid #CDDEEF;
+    transform: rotate(-90deg);
+    animation-name: fadeInLine;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    
+}
+
+
+@keyframes fadeInLine{
+    
+    from{opacity: 0%;}
+    to{opacity: 100%;}
+}
+
+
+
+
+.about-us .container{
+    padding-left: 100px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.about-us-title{
+    width: 50%;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeIn{
+    from{margin-bottom: 0px; opacity: 0%;}
+    to{margin-top: 75px; opacity: 100%;}
+}
+
+
+.about-us-title h1{
+    width: 166px;
+    height: 39px;
+    left: 100px;
+    top: 134px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 39px;
+    color: var(--color-not-black);
+}
+
+.about-us-title p{
+    margin-top: 60px;
+    width: 492px;
+    height: 145px;
+    left: 100px;
+    top: 233px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 132%;
+}
+
+.our-principles{
+    margin-left: 163px;
+    width: 50%;
+    margin-top: 139px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+
+.our-principles h4{
+    text-transform: uppercase;
+    width: 413px;
+    height: 32px;
+    left: 734px;
+    top: 278px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 132%;
+    color: var(--color-green);
+}
+
+
+.list-of-principle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+    width: 200px;
+    height: 186px;
+    left: 767px;
+    top: 354px;
+}
+
+
+.list-of-principle2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+    margin-left: 50px;
+    width: 200px;
+    height: 186px;
+    left: 1053px;
+    top: 354px;
+}
+
+
+
+.list-of-principle li, .list-of-principle2 li{
+    list-style: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 21px;
+    color: var(--color-green);
+    width: 200px;
+    height: 42px;
+    opacity: 0.9;
+    text-indent: -2rem;
+}
+
+.list-of-principle li::before, .list-of-principle2 li::before {
+    
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 39px;
+    background-size: cover;
+    background-image: url(assets/images/list.png);
+    background-repeat: no-repeat;
+    margin-right: 17px;
+    background-position: center center;
+    vertical-align: middle;
+}
+
+
+.list-of-principle2 li{
+    width: 250px;
+    height: 42px;
+}
+
+
+.adjust-top{
+    margin-top: 44px;
+    margin-left: 30px;
+}
+
+.service{
+    width: 100%;
+    height: 702px;
+    padding-top: 131px;
+    background: url(assets/images/courtroom.png) no-repeat 30% 70%;
+}
+
+.service .container{
+    padding-left: 100px;
+}
+
+.service-list{
+    width: 50%;
+}
+
+.service-list h1{
+    width: 158px;
+    height: 39px;
+    left: 100px;
+    top: 131px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 39px;
+}
+
+.service-list ul{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 25px;
+    width: 317px;
+    height: 167px;
+    left: 100px;
+    top: 230px;
+}
+
+.service-list ul li{
+    list-style: none;
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 23px;
+    text-transform: uppercase;
+}
+
+.service-list ul li:hover{
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 23px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: var(--color-green);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.grid-s{
+    display: flex;
+    margin-top: 134px;
+}
+
+.grid-s h4{
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+
+.grid-s button{
+    
+    width: 197px;
+    height: 44px;
+    border: none;
+    background: var(--color-green);
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 200;
+    color: var(--color-white);
+    margin-left: 20px;
+    margin-top: -3px;
+    
+}
+
+
+.how-we-work{
+    width: 50%;
+     margin-top: 66px;
+    padding-right: 30px;
+}
+
+.how-we-work p{
+    margin-bottom: 82px;
+    width: 605px;
+    height: 145px;
+    left: 733px;
+    top: 230px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 132%;
+}
+
+.how-we-work h4{
+    width: 556px;
+    height: 23px;
+    left: 733px;
+    top: 457px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 23px;
+    color: var(--color-green);
+    text-transform: uppercase;
+}
+
+.stages li {
+    list-style: none;
+    width: 300px;
+    height: 21px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 21px;
+    color: var(--color-green);
+    text-indent: -2rem;
+    margin-bottom: 13px;
+}
+
+.stages2 li{
+    list-style: none;
+    width: 251px;
+    height: 21px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 21px;
+    margin-left: 30px;
+    color: var(--color-green);
+    text-indent: -2rem;
+    margin-bottom: 13px;
+}
+
+.stages li::before, .stages2 li::before{
+    
+    content: '';
+    display: inline-block;
+    width: 16.97px;
+    height: 16.97px;
+    background-size: cover;
+    background-image: url(assets/images/pentagonlist.png);
+    background-repeat: no-repeat;
+    margin-right: 17px;
+    background-position: center center;
+    vertical-align: middle;
+}
+
+.reviews{
+    
+    width: 100%;
+    height: 728px;
+}
+
+.reviews .container{
+    padding-left: 100px;
+}
+
+.review-header{
+    margin-bottom: 60px;
+    display: flex;
+}
+
+.review-header h1{
+    width: 148px;
+    height: 39px;
+    top: 136px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 39px;
+}
+
+
+.review-header small{
+    margin-left: 500px;
+    width: 132px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 21px;
+    color:var(--color-green);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.ana-reviews .maria-image{
+    width: 164px;
+    height: 164px;
+    background: var(--color-light-blue);
+}
+
+.ana-reviews .maria-image img{
+    padding-left: 9px;
+    padding-top: 4px;
+}
+
+.review-state{
+    margin-left: 24px;
+}
+
+.review-state h4{
+    width: 62px;
+    height: 23px;
+    left: 280px;
+    top: 235px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 23px;
+}
+
+.review-state small{
+    width: 90px;
+    height: 17px;
+    left: 513px;
+    top: 239px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 17px;
+    margin-left: 150px;
+    color: var(--color-dark-grey);
+}
+
+.review-state blockquote{
+    width: 333px;
+    height: 84px;
+    left: 280px;
+    top: 270px;
+    margin-top: 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 132%;
+}
+
+
+.oliks-reviews{
+    width: 50%;
+    height: 164px;
+    margin-left: 150px;
+    top: 231px;
+}
+
+
+.oliks-reviews .oliks-image{
+    
+    width: 164px;
+    height: 164px;
+    background: var(--color-light-blue);
+    
+}
+
+.oliks-reviews .oliks-image img{
+    
+    padding-left: 9px;
+    padding-top: 4px;
+}
+
+.anton-reviews .anton-image{
+    
+    width: 164px;
+    height: 164px;
+    background: var(--color-light-blue);
+}
+
+.anton-reviews .anton-image img{
+    padding-left: 9px;
+    padding-top: 4px;
+}
+
+
+.anton-reviews{
+    margin-top: 71px;
+}
+
+
+.slider-control {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 25px;
+    margin-left: 800px;
+    margin-top: -131px;
+}
+
+
+.slider-control h4{
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.divider{
+    width: 23px;
+    height: 0px;
+    margin-top: 12px;
+    vertical-align: middle;
+    border: 1px solid #F5E3DF;
+    transform: rotate(-90deg);
+    }
+
+
+.ask-a-question{
+    padding-top: 136px;
+    width: 100%;
+    height: 500px;
+    background: url(assets/images/octagonshape.png) no-repeat 2% 14%, url(assets/images/gave.png) no-repeat 20%, var(--color-not-black);
+    color: #fff;
+}
+
+
+.ask-a-question .container{
+    padding-left: 100px;
+}
+
+.contact-info {
+    width: 50%;
+}
+
+.contact-info h1 {
+    width: 286px;
+    height: 39px;
+    left: 100px;
+    top: 136px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 39px;
+    margin-bottom: 60px;
+}
+
+.contact-info p{
+    width: 481px;
+    height: 87px;
+    left: 100px;
+    top: 235px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 132%;
+    margin-bottom: 60px;
+}
+
+.date-time h5{
+    width: 195px;
+    height: 38px;
+    left: 100px;
+    top: 382px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+    margin-bottom: 14px;
+}
+
+
+.date-time h4{
+    width: 214px;
+    height: 19px;
+    left: 100px;
+    top: 434px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+
+.teleno h5{
+    width: 136px;
+    height: 19px;
+    left: 418px;
+    top: 382px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+    margin-bottom: 14px;
+}
+
+.teleno{
+    margin-left: 104px;
+}
+
+
+.teleno h4{
+    width: 178px;
+    height: 19px;
+    left: 418px;
+    top: 415px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+
+.contact-form{
+    width: 50%;
+}
+
+.contact-form img{
+    margin-bottom: 55px;
+}
+
+
+.contact-form .row{
+    flex-direction: column;
+}
+
+
+.textarea textarea{
+    
+    width: 605px;
+    height: 193px;
+    left: 733px;
+    top: 235px;
+    background: #7F858B;
+    opacity: 0.2;
+    padding-left: 22px;
+    padding-top: 15px;
+    color: #fff;
+    font-size: 22px;
+    font-family: "Mariupol-Regular", sans-serif;
+}
+
+.textarea textarea::placeholder{
+    color: #fff;
+    font-size: 22px;
+    font-family: "Mariupol-Regular", sans-serif;
+}
+
+.email-input{
+    margin-top: 67px;
+}
+
+
+.email-input input[type="email"]{
+    
+    background: none;
+    border-bottom: 1px solid var(--color-light-blue);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    color: #fff;
+    font-size: 22px;
+    font-family: "Mariupol-Regular", sans-serif;
+}
+
+
+.email-input input[type="email"]::placeholder{
+    color: #fff;
+}
+
+
+.email-input button{
+     
+    width: 274px;
+    height: 60px;
+    left: 1064px;
+    top: 472px;
+    background: #34465C;
+    border: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: var(--color-white);
+    font-weight: 400;
+    margin-left: 44px;
+    cursor: pointer;
+    
+}
+
+
+.blog{
+    
+    width: 100%;
+    height: 797px;
+    width: 100%;
+    height: 797px;
+    padding-top: 136px;
+}
+
+
+.blog .container{
+    padding-left: 100px;
+}
+
+.container .section-title{
+    width: 139px;
+    height: 39px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 39px;
+    margin-bottom: 60px;
+}
+
+.blog-cate{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 120px;
+    margin-bottom: 42px;
+}
+
+.blog-cate li{
+    list-style: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: var(--color-dark-grey);
+    cursor: pointer;
+}
+
+.blog-cate li:active{
+    color: var(--color-green);
+    text-decoration: underline;
+}
+
+
+.post-image{
+    width: 50%;
+}
+
+.post-contain{
+    width: 50%;
+}
+
+.main-post-image-contain{
+    width: 563px;
+    height: 363px;
+    background: var(--color-light-blue);
+}
+
+
+.main-post-image-contain img{
+    padding-top: 13px;
+    padding-right: 20px;
+}
+
+
+
+
+
+.post-title{
+    width: 569px;
+    height: 54px;
+    left: 734px;
+    top: 327px;
+    margin-bottom: 30px;
+}
+
+.out-bound-link{
+    margin-top: 78px;
+}
+
+
+.post-contain p {
+    
+    width: 586px;
+    height: 145px;
+    left: 734px;
+    top: 411px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 132%;
+}
+
+
+.pagination{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 25px;
+    margin-top: -28px;
+    margin-left: 126px;
+}
+
+.pagination .prev, .pagination .next{
+    
+    width: 88px;
+    height: 23px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: var(--color-green);
+    cursor: pointer;
+    
+}
+
+.border-line{
+    width: 23px;
+    height: 0px;
+    border: 2px solid #CDDEEF;
+    transform: rotate(-90deg);
+    background: var(--color-light-blue);
+    margin-top: 12px;
+}
+
+
+.date{
+    display: none;
+}
+
+footer{
+    width: 100%;
+    height: width: 1440px;
+    height: 352px;
+    padding-top: 111px;
+    background: var(--color-not-black);
+    color: var(--color-white);
+}
+
+footer .container{
+    padding-left: 100px;
+    padding-right: 102px;
+}
+
+.address-date-time h5{
+    
+    width: 234px;
+    height: 15px;
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    color: #F7F7F7;
+    margin-bottom: 12px;
+    margin-right: 125px;
+}
+
+
+.address-date-time h4{
+    width: 157px;
+    height: 15px;
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    color: #F7F7F7;
+}
+
+.telephone{
+    margin-right: 100px;
+}
+
+.telephone h5,h4{
+    margin-bottom: 12px;
+}
+
+.telephone h5{
+    
+    width: 134px;
+    height: 15px;
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    color: #F7F7F7;
+}
+
+.telephone h4{
+    
+    width: 137px;
+    height: 15px;
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    color: #F7F7F7;
+}
+
+.footer-nav{
+    margin-top: 36px;
+}
+
+
+.footer-nav ul .desktop-nav{
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+}
+
+.footer-nav ul li{
+    list-style: none;
+}
+
+
+.footer-nav ul li a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    color: var(--color-white);
+}
+
+
+.subscribe-form-overlay form .row{
+    flex-direction: column;
+}
+
+.subscribe-form-overlay .container{
+    padding: 100px;
+}
+
+.mobile-footer-nav-1, .mobile-footer-nav-2{
+    display: none
+}
+
+.logo-contain{
+    margin-right: 86px;
+}
+
+.logo-arrow button{
+    
+    width: 307px;
+    height: 59px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--color-green);
+    border: none;
+    background: var(--color-light-blue);
+}
+
+.top-arrow{
+    margin-top: 36px;
+    margin-left: 115px;
+    color: var(--color-green);
+}
+
+
+.subscribe-form-overlay{
+    
+    position: absolute;
+    width: 100%;
+    height: 810px;
+    left: 0px;
+    top: 0px;
+    background: rgba(17, 23, 30, 0.64);
+    display: none;
+    animation-name: bounceIn;
+    animation-duration: 0.75s;
+    animation-fill-mode: both;
+    
+}
+
+
+ @keyframes bounceIn{
+        0%, 20%, 40%, 60%, 80%, 100%{
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        
+        0%{
+            opacity: 0;
+            transform: scale3d(0.3, 0.3, 0.3);
+        }
+        
+        20%{
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+        
+        40%{
+            transform: scale3d(0.9, 0.9, 0.9);
+        }
+        
+        60%{
+            opacity: 1;
+            transform: scale3d(1.03, 1.03, 1.03);
+        }
+        
+        80%{
+            transform: scale3d(0.97, 0.97, 0.97);
+        }
+        
+        100%{
+            
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+
+.subscribe-form{
+    width: 587px;
+    height: 663px;
+    background: var(--color-light-blue);
+    margin: 0 auto;
+}
+
+.subscribe-form .first-form-close{
+    margin-top: 37px;
+    margin-left: 507px;
+    cursor: pointer;
+}
+
+.subscribe-1{
+    padding: 67px;
+}
+
+.subscribe-1 h4{
+    width: 418px;
+    height: 46px;
+    left: 64px;
+    top: 103px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: var(--color-green);
+    margin-bottom: 27px;
+}
+
+.subscribe-1 input[type="text"], .subscribe-1 input[type="tel"]{
+    
+    width: 459px;
+    height: 59px;
+    left: 67px;
+    top: 176px;
+    margin-bottom: 12px;
+    padding: 25px;
+    border: none;
+    font-family: 'Mariupol';
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--color-green);
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-1 input[type="text"]::placeholder, .subscribe-1 input[type="tel"]::placeholder{
+    
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+    color: var(--color-green);
+}
+
+.subscribe-1 input[type="text"]:focus, .subscribe-1 input[type="tel"]:focus{
+    
+    background: #fff;
+}
+
+
+
+.subscribe-1 h5{
+    width: 461px;
+    height: 21px;
+    left: 63px;
+    top: 408px;
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 21px;
+    color: var(--color-not-black);
+    margin-top: 12px;
+}
+
+.subscribe-1 h6{
+    width: 282px;
+    height: 15px;
+    left: 149px;
+    top: 446px;
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-not-black);
+    margin-top: 17px;
+    margin-left: 80px;
+}
+
+.pick-a-time{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    margin-top: 29px;
+    width: 459px;
+    height: 28px;
+    'Mariupol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 17px;
+    color: var(--color-green);
+}
+
+.pick-a-time input[type="checkbox"]{
+    
+    appearance: none;
+    box-sizing: border-box;
+    width: 28px;
+    height: 28px;
+    opacity: 0.5;
+    border: 2px solid #34465C;
+    vertical-align: middle;
+}
+
+.pick-a-time input[type="checkbox"]::before{
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: #34465C;
+    opacity: 0.4;
+    transform: scale(0);
+}
+
+.pick-a-time input[type="checkbox"]:checked::before{
+    background: var(--color-green);
+    transform: scale(1);
+}
+
+label{
+   margin-top: 5px;
+    margin-left: 20px;
+}
+
+
+.subscribe-1 button{
+    width: 461px;
+    height: 59px;
+    left: 63px;
+    top: 552px;
+    margin-top: 34px;
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 21px;
+    text-transform: uppercase;
+    background: linear-gradient(270deg, rgba(52, 70, 92, 0.91) 8.77%, #34465C 38.19%, #34465C 60.69%, rgba(52, 70, 92, 0.91) 90.73%);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.thank-you{
+    padding: 67px;
+    display: none;
+    animation-name: bounceIn;
+    animation-duration: 0.75s;
+    animation-fill-mode: both;
+}
+
+.form-logo{
+    text-align: center;
+}
+
+.thank-you h4{
+    width: 263px;
+    height: 23px;
+    left: 162px;
+    top: 297px;
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: var(--color-green);
+    margin-top: 47px;
+    margin-bottom: 46px;
+    margin-left: 80px;
+}
+
+
+.thank-you p{
+    width: 459px;
+    height: 63px;
+    left: 63px;
+    top: 366px;
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 21px;
+    text-align: center;
+    color:  #11171E;;
+}
+
+
+.thank-you h6{
+    width: 119px;
+    height: 21px;
+    left: 223px;
+    top: 480px;
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 21px;
+    margin-left: 150px;
+    margin-top: 51px;
+
+}
+
+
+.thank-you button{
+        width: 461px;
+        height: 59px;
+        left: 63px;
+        top: 552px;
+        margin-top: 34px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 21px;
+        text-transform: uppercase;
+        background: linear-gradient(270deg, rgba(52, 70, 92, 0.91) 8.77%, #34465C 38.19%, #34465C 60.69%, rgba(52, 70, 92, 0.91) 90.73%);
+        border: none;
+        color: #fff;
+        cursor: pointer;
+}
+
+
+
+
+/* MOBILE RESPONSIVE VIEW ONLY */
+
+@media screen and (max-width: 567px ){
+    
+    
+    .menu{
+        position: absolute;
+        background: var(--color-green);
+        padding-left: 18px;
+        width: 357px;
+        height: 819px;
+        left: 0px;
+        top: 0px;
+        
+    }
+    
+    
+    .menu-backdrop {
+    
+        width: 375px;
+}
+    
+    
+    .menu nav ul li a{
+        color: var(--color-white)
+    }
+    
+    
+    .menu-line{
+        position: absolute;
+        width: 0px;
+        height: 497px;
+        left: 272px;
+        top: 0px;
+        opacity: 0.5;
+        border: 2px solid #CDDEEF;
+        transform: rotate(0deg);
+    }
+    
+    .menu-address, .menu-date-time{
+        text-transform: uppercase;
+        color: var(--color-light-blue);
+    }
+    
+    .address-contact .info-contain h4{
+        font-size: 14px;
+    }
+    
+    .menu-address {
+        width: 143px;
+        height: 26px;
+       
+    }
+    
+    
+    
+    .menu-date-time{
+        font-weight: 400;
+    }
+    
+    .menu-logo img{
+        
+        visibility: hidden;
+    }
+    
+    
+    .menu-logo{
+         background: url(assets/images/menu-mobile-nav-logo.png) no-repeat 80%;
+            position: absolute;
+            bottom: 40;
+            right: 90;
+    }
+    
+    
+    .address-contact{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+   
+    
+    
+    
+    .menu-email{
+    color: var(--color-light-blue);
+    }
+    
+    
+    .sub-menu{
+        display: none;
+    }
+    
+    
+    .sub-mobile-menu{
+        display: block;
+    }
+    
+    .sub-mobile-menu .container{
+        padding: 46px;
+    }
+    
+    .sub-mobile-menu .container ul{
+        display: flex;
+    }
+    
+    .sub-mobile-menu .container ul li{
+        list-style: none;
+    }
+    
+    .sub-mobile-menu .container ul li a{
+          text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+            color: var(--color-white);
+    }
+    
+    .submenu-line{
+        left: 5px;
+        top: 50px;
+    }
+    
+    .menu-icon{
+        margin-left: 60px;
+    }
+    
+    .menu-icon2{
+        margin-left: 20px;
+    }
+    
+    .menu-logo-top{
+        margin-left: 68px;
+        cursor: pointer;
+    }
+    
+    
+    .first-section{
+        width: 375px;
+        height: 820px;
+         background: url(assets/images/hero-image.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    
+    
+    .first-section-title h1{
+        width: 340px;
+        height: 111px;
+        left: 18px;
+        top: 244px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 38px;
+        line-height: 37px;
+        margin-left: -50px;
+        margin-top: 141px;
+    }
+    
+    .section-line-1{
+        position: absolute;
+        width: 101px;
+        height: 0px;
+        left: 2px;
+        top: 565px;
+        border: 1px solid #FFFFFF;
+        transform: rotate(180deg);
+    }
+    
+    .section-line-2{
+        position: absolute;
+        width: 329px;
+        height: 0px;
+        left: -60px;
+        top: 654px;
+        border: 1px solid #FFFFFF;
+        transform: rotate(90deg);
+    }
+    
+    .grid-d{
+        flex-direction: column;
+        margin-top: 0px;
+    }
+    
+    .grid-d .text h4{
+        position: absolute;
+        width: 209px;
+        height: 42px;
+        left: 132px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 21px;
+        text-align: right;
+    }
+    
+    .cta-btn-contain{
+        margin-left: 35px;
+    }
+    
+    .about-us{
+        width: 375px;
+        height: 1000px;
+        padding-top: 62px;
+        background: url(assets/images/lawscale.png) no-repeat 100% 100%;
+    }
+    
+    .about-us .container{
+        
+        padding-left: 22px;
+    }
+    
+    
+    .about-us .row{
+        flex-direction: column;
+    }
+    
+    .about-us-title h1{
+        width: 166px;
+        height: 39px;
+        left: 22px;
+        top: 62px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 39px;
+        
+    }
+    
+    .about-us-title p{
+        width: 326px;
+        height: 144px;
+        left: 18px;
+        top: 130px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 132%;
+        
+    }
+    
+    .our-principles{
+        margin-left: 0;
+        margin-top: 250px;
+    }
+    
+    .our-principles h4{
+        
+        width: 130px;
+        height: 78px;
+        left: 18px;
+        top: 470px;
+font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 132%;
+        /* or 26px */
+text-transform: uppercase;
+        
+    }
+    
+
+    .about-us-line{
+        position: absolute;
+        width: 180px;
+        height: 0px;
+        left: 178px;
+        top: 1410px;
+
+        opacity: 0.5;
+
+        border: 1px solid #11171E;
+        
+        transform: rotate(0deg);
+    }
+    
+   
+    
+    .our-principles .row{
+        flex-direction: row;
+    }
+    
+    .list-of-principle{
+        margin-left: -30px;
+    }
+    
+    
+    .list-of-principle li{
+        width: 130px;
+        height: 38px;
+
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 19px;
+
+    color: #11171E;
+
+    opacity: 0.9;
+
+    }
+    
+    
+    .list-of-principle li::before{
+        
+         content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-image: url(assets/images/mobile-list.png);
+        background-repeat: no-repeat;
+        margin-right: 17px;
+        vertical-align: middle;
+        margin-bottom: 6px;
+    }
+    
+    .list-of-principle2{
+        margin-left: 20px;
+    }
+    
+    .list-of-principle2 li{
+        width: 187px;
+        height: 38px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 19px;
+        color: #11171E;
+        opacity: 0.9;
+        
+    }
+    
+    
+    .list-of-principle2 li::before{
+         content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        background-image: url(assets/images/mobile-list.png);
+        background-repeat: no-repeat;
+        margin-right: 17px;
+        vertical-align: middle;
+        margin-bottom: 6px;
+    }
+    
+    
+    .service{
+        width: 375px;
+        height: 820px;
+        padding-top: 60px;
+        padding-bottom: 147px;
+        background: url(assets/images/courthome.png) no-repeat 100% 95%;
+    }
+    
+    .service .container {
+        padding-left: 18px;
+    }
+    
+    .service .row{
+        flex-direction: column;
+    }
+    
+    .service-list h1{
+        width: 158px;
+        height: 39px;
+        left: 18px;
+        top: 75px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 39px;
+    }
+    
+    
+    .service-list ul li{
+        
+    left: 33px;
+    top: 153px;
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 18px;
+    text-transform: uppercase;
+    }
+    
+    .service-list ul li:hover{
+        text-decoration: none;
+        margin-left: 12px;
+         font-size: 19px;
+         line-height: 18px;
+        color: #633E36;
+        
+    }
+    
+    .service-list ul li:hover::before {
+        display: inline-block;
+        content: "";
+        width: 28px;
+        height: 0px;
+        left: 18px;
+        top: 181px;
+        opacity: 0.5;
+        border: 2px solid #11171E;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    
+    .grid-s{
+        position: absolute;
+        margin-top: 0.5px;
+    }
+    
+    .grid-s h4{
+       width: 121px;
+        height: 13px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 13px;
+        text-transform: uppercase;
+        color: #11171E;
+    }
+    
+    
+    .how-we-work p{
+        
+        width: 340px;
+        height: 120px;
+        left: 18px;
+        top: 305px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 132%;
+        color: #11171E;
+        margin-top: -32px;
+        
+    }
+    
+    
+    .how-we-work h4{
+        width: 229px;
+        height: 44px;
+        left: 18px;
+        top: 459px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 22px;
+        text-transform: uppercase;
+    }
+    
+    
+    .how-we-work .row{
+        flex-direction: column;
+    }
+    
+    .stages li{
+        font-size: 22px;
+        line-height: 21px;
+        color: #34465C;
+    }
+    
+    .stages2 {
+        margin-left: -30px;
+    }
+    
+    
+    .grid-s{
+        position: absolute;
+        top: 825%;
+    }
+    
+    .reviews{
+        width: 375px;
+        height: 803px;
+    }
+    
+    .reviews .container{
+        padding-left: 18px;
+    }
+    
+    .review-header {
+       margin-bottom: 39px; 
+    }
+    
+    .review-header h1{
+        width: 148px;
+        height: 39px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 39px;
+        margin-top: 75px;
+    }
+    
+    .review-header small{
+        display: none;
+    }
+    
+    .slider .row{
+        flex-direction: column;
+    }
+    
+   .ana-reviews .maria-image{
+       
+       width: 340px;
+        height: 334px;
+    }
+    
+    .maria-image img{
+        
+        content: url(assets/images/maria-mobile.png);
+        
+    }
+    
+    .ana-reviews .maria-image img{
+        
+   padding-left: 0;
+    padding-top: 19px;
+}
+    
+    
+    .review-state{
+        margin-left: 1px;
+    }   
+    
+   
+    .review-state .row{
+    
+        margin-top: 17px;
+        
+    }
+    
+    
+    .review-state small{
+        margin-top: -19px;
+        margin-left: 250px;
+    }
+    
+    
+    .oliks-reviews{
+        
+    }
+    
+    .anton-reviews{
+        display: none;
+    }
+    
+    
+    .slider-control{
+        margin-top: 35px;
+        margin-left: 86px;
+    }
+    
+    
+    
+    .ask-a-question{
+        width: 375px;
+        height: 812px;
+        padding-top:  75px;
+        background:  url(assets/images/gave.png) no-repeat -91% 97%, var(--color-not-black);
+    color: #fff;
+    }
+    
+    .ask-a-question .container{
+        
+        padding: 18px;
+    }
+    
+    
+    .ask-a-question .row{
+        flex-direction: column;
+    }
+    
+    
+    .contact-info h1 {
+     width: 286px;
+        height: 39px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 39px;
+        
+    }
+    
+    
+    .contact-info p{
+        width: 338px;
+        height: 72px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 132%;
+    }
+    
+    .contact-info .row{
+        position: absolute;
+        top: 4300;
+    }
+    
+    .contact-form img{
+        display: none;
+    }
+    
+    
+    .contact-form .textarea{
+        margin-top: -35px;
+    }
+    
+    
+    .contact-form textarea{
+        width: 340px;
+        height: 46px;
+        background: #7F858B;
+        opacity: 0.2;
+    }
+    
+    
+    .contact-form .email-input{
+        margin-top: 57px;
+    }
+    
+    .email-input input[type="email"]{
+        width: 200%
+    }
+    
+    
+    .contact-form button{
+        margin-top: 29px;
+        margin-left: 0;
+        font-size: 18px;
+        background: #633E36;
+        width: 338px;
+        height: 60px;
+    }
+    
+    
+    .teleno{
+        margin-left: 1;
+        margin-top: 36px;
+    } 
+    
+    
+    .blog-mobile-line{
+        position: absolute;
+        width: 69px;
+        height: 0px;
+        left: 300px;
+        top: 4634px;
+        opacity: 0.5;
+        border: 2px solid #34465C;
+        transform: rotate(90deg);
+    }
+    
+    .blog{
+        padding-top: 79px;
+        width: 375px;
+        height: 812px;
+        
+    }
+    
+    .blog .container{
+        padding-left: 18px;
+    }
+    
+    
+    .blog .section-title{
+        width: 139px;
+        height: 39px;
+        left: 18px;
+        top: 79px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 39px;
+    }
+    
+    .blog-cate {
+        
+        overflow: auto;
+        white-space: nowrap;
+        gap: 20px;
+        
+    }
+    
+    .blog-cate::-webkit-scrollbar{
+        display: none;
+    }
+    
+    
+    .blog-cate li{
+        font-size: 20px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    
+    
+.main-post-image-contain{
+   width: 138px;
+    height: 105px;
+    background: var(--color-light-blue);
+}
+    
+   .main-post-image-contain img{
+       content: url(assets/images/post-image-mobile.png);
+       
+       padding: 6px 5px 5px 4px;
+} 
+    
+    
+    .post-contain h1{
+        
+        width: 191px;
+        height: 64px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 103%;
+    }   
+    
+    
+    .post-contain p{
+        display: none;
+    }
+    
+    
+   .post-contain .date{
+    display: block;
+    
+    width: 116px;
+    height: 13px;
+
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 13px;
+
+    color: #11171E;
+}
+    
+    
+    .pagination{
+        margin-top: 50px;
+        margin-left: 40px;
+    }  
+    
+    
+    footer{
+        width: 375px;
+        height: 392px;
+        padding-top: 75px;
+    }
+    
+    footer .container{
+        padding-left: 34px;
+        padding-right: 36px;
+    }
+
+    
+    footer .row{
+        flex-direction: column;
+    }
+    
+    
+    .contact-and-nav .row{
+        flex-direction: row;
+    }
+    
+    
+    .address-date-time h5{
+        
+        width: 143px;
+        height: 26px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        
+    }  
+    
+    .address-date-time h4{
+        width: 138px;
+        height: 13px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 13px;
+    }
+    
+    .telephone{
+        margin-left: -80px;
+    }
+    
+    .telephone h5{
+        width: 118px;
+        height: 13px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 13px;
+        color: #F7F7F7;
+    } 
+    
+    
+    
+    .telephone h4{
+        width: 120px;
+        height: 13px;
+
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 13px;
+    }
+    
+  .footer-nav ul .desktop-nav{
+        display: none;
+    }
+    
+    .mobile-footer-nav-1, .mobile-footer-nav-2{
+        display: inline-block;
+    }
+    
+    .mobile-footer-nav-1{
+        position: absolute;
+        top: 5780;
+    }
+    
+    .mobile-footer-nav-2{
+        position: absolute;
+        top: 5780;
+        right: 12em;
+    }
+    
+    .mobile-footer-nav-1 li, .mobile-footer-nav-2 li{
+        margin-bottom: 8px;
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 13px;
+    }
+    
+    .top-arrow{
+        display: none;
+    }
+    
+    
+    
+    .logo-contain{
+        position: absolute;
+        top: 5780;
+        right: -60;
+    }
+    
+    
+    .logo-contain img{
+        content: url(assets/images/footer-logo.png);
+    }
+    
+    
+   
+    
+    
+    .footer-line{
+        position: absolute;
+        width: 46px;
+        height: 0px;
+        left: 270px;
+        top: 5930px;
+        opacity: 0.5;
+        border: 2px solid #CDDEEF;
+        transform: rotate(90deg);
+    }
+    
+    
+    
+/*  FORM-LEAD-MOBILE  */
+    
+    .subscribe-form-overlay{
+        background: none;
+    }  
+    
+    .subscribe-form-overlay .container{
+        padding-left: 0
+    }
+    
+    
+    .subscribe-form{
+    width: 375px;
+    height: 714px;
+    background: var(--color-light-blue);
+}
+    
+  .subscribe-form .first-form-close{
+    margin-top: 37px;
+    margin-left: 332px;
+    cursor: pointer;
+}
+    
+    .subscribe-1{
+    padding: 18px;
+}
+    
+    
+    .subscribe-1 h4{
+        width: 316px;
+        height: 36px;
+        left: 18px;
+        top: 158px;
+
+        font-family: 'Mariupol';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 18px;
+        text-transform: uppercase;
+    }  
+    
+    
+    
+    .subscribe-1 input[type="text"], .subscribe-1 input[type="tel"]{
+    width: 339px;
+    height: 59px;
+    margin-bottom: 12px;
+    padding: 25px;
+    border: none;
+    font-family: 'Mariupol';
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--color-green);
+    background: rgba(255, 255, 255, 0.6);
+}
+    
+    
+    .subscribe-1 h5{
+        
+    width: 278px;
+    height: 42px;
+    left: 18px;
+    top: 470px;
+    font-family: 'Mariupol';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 21px;
+    color: var(--color-not-black);
+    margin-top: 12px;
+}
+    
+    .subscribe-1 h6{
+        width: 162px;
+height: 26px;
+font-family: 'Mariupol';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 13px;
+text-transform: uppercase;
+        margin-left: 0;
+        position: absolute;
+        top: 590;
+        left: 20;
+        text-align: start;
+    }  
+    
+    .pick-a-time{
+        display: flex;
+        flex-direction: column;
+        margin-left: 199px;
+        margin-top: px;
+    }
+    
+    .pick-a-time input[type="checkbox"]{
+    
+    appearance: none;
+    box-sizing: border-box;
+    width: 36px;
+    height: 36px;
+    opacity: 0.5;
+    border: 2px solid #34465C;
+    vertical-align: middle;
+    
+}
+    
+    
+    .pick-a-time input[type="checkbox"]::before{
+    position: absolute;
+    content: "";
+    width: 33px;
+    height: 33px;
+    background: #34465C;
+    opacity: 0.4;
+    transform: scale(0);
+}
+    
+    label{
+        margin-left: 8px;
+    }
+ 
+    
+    
+    .subscribe-1 button{
+        width: 338px;
+        height: 59px;
+        margin-top: 150px;
+    }  
+    
+    
+    .thank-you{
+         padding: 18px;
+    }
+    
+    
+    .thank-you h4{
+        font-size: 24px;
+        text-align: center;
+        margin-left: 50px;
+        
+    }
+    
+    
+    .thank-you p{
+        width: 320px;
+        height: 60px;
+        font-size: 20px;
+        line-height: 23px;
+        margin-left: 20px;
+    }
+    
+    
+    .thank-you h6{
+        margin-left: 120px;
+       margin-bottom: 20px;
+        margin-top: 100px;
+    }
+    
+    
+    .thank-you button{
+        
+         width: 338px;
+        height: 59px;
+        
+    }
+    
+        
+    
+}
+
+
+.chart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bar {
+  background-color: blue;
+}
